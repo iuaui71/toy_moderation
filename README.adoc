@@ -7,6 +7,7 @@ This repository contains a small demonstration application. It has two services,
 The purpose is that docker containers are put as a PODs into a Kubernetes cluster and the service (nginx) is available from outside and backend is accessible by frontend application only.
 
 == Prerequisites
+:icons: font
 
 Due to the nature of the task given, it is assumed that there is a Linux environment in use. MacOS or Windows environments are not supported, however it should not be too hard to convert these into the MacOS or Windows environments.
 There is a assumptions made that one have installed and/or available the following software stacks and needed modules: 
