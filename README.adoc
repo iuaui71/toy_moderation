@@ -16,10 +16,9 @@ There is a assumptions made that one have installed and/or available the followi
 
 For quick image creation one can use the create script provided in the resources directory by
 [source, bash]
----
 cd resources
-bash create.bash
----
+bash create.bash    
+
 
 == Frontend service (nginx)
 === Creating a docker image
