@@ -8,7 +8,8 @@ The purpose is that docker containers are put as a PODs into a Kubernetes cluste
 
 == Prerequisites
 
-There is a assumptions made that one have installed and/or available the following software stacks and needed modules:app-name: 
+Due to the nature of the task given, it is assumed that there is a Linux environment in use. MacOS or Windows environments are not supported, however it should not be too hard to convert these into the MacOS or Windows environments.
+There is a assumptions made that one have installed and/or available the following software stacks and needed modules: 
 
 * docker binaries installed for creating docker images
 * kubernetes cluster available
