@@ -3,8 +3,23 @@ Ilari Ahtiainen <ilari at ahtiainen dot eu>
 :description: Documentation of the small task given to me
 :sectanchors:
 
-This repository contains a small task given. It has two services, nginx as a frontend and flask application as a backend services.
+This repository contains a small demonstration application. It has two services, nginx as a frontend and flask application as a backend services.
 The purpose is that docker containers are put as a PODs into a Kubernetes cluster and the service (nginx) is available from outside and backend is accessible by frontend application only.
+
+== Prerequisites
+
+There is a assumptions made that one have installed and/or available the following software stacks and needed modules:app-name: 
+
+* docker binaries installed for creating docker images
+* kubernetes cluster available
+* way to set the created images available for the kubernetes cluster
+
+For quick image creation one can use the create script provided in the resources directory by
+[source, bash]
+---
+cd resources
+bash create.bash
+---
 
 == Frontend service (nginx)
 === Creating a docker image
