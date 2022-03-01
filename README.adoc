@@ -1,0 +1,17 @@
+= Toy Moderation README
+Ilari Ahtiainen <ilari at ahtiainen dot eu>
+:description: Documentation of the small task given to me
+:sectanchors:
+
+This repository contains a small task given. It has two services, nginx as a frontend and flask application as a backend services.
+The purpose is that docker containers are put as a PODs into a Kubernetes cluster and the service (nginx) is available from outside and backend is accessible by frontend application only.
+
+== Frontend service (nginx)
+=== Creating a docker image
+
+=== Create Kubernetes Deployment and Service 
+
+== Backend service (flask)
+=== Creating a docker image
+
+=== Create Kubernetes Deplpoyment
