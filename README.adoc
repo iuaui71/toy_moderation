@@ -23,15 +23,10 @@ bash create.bash
 
 The above script creates two docker images to the local environment with tags 
 
-* backend:toymoderation
-* frontend:toymoderation
-
-IMPORTANT: You need to use the above tags or alter the tags accordingly in your Kubernetes related yaml files!
-
-Containers are available as
-
 * ghcr.io/iuaui71/backend:latest
 * ghcr.io/iuaui71/frontend:latest
+
+IMPORTANT: You need to use the above tags or alter the tags accordingly in your Kubernetes related yaml files!
 
 == Frontend service (nginx)
 === Creating a docker image

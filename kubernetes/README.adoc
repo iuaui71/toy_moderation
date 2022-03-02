@@ -1,0 +1,21 @@
+== Deploying the app bundle to K8s cluster
+
+With the following commands you can install the environment in your environment. 
+You can clone this repository into your environment and alter the yaml files according to your needs
+
+[source, bash]
+git clone https://github.com/iuaui71/toy_moderation.git
+cd toy_moderation/kubernetes
+kubectl create -f namespace.yaml
+kubectl create -f registrysecret.yaml
+kubectl create -f frontend.yaml
+kubectl create -f backend.yaml
+kubectl create -f frontendservice.yaml
+kubectl create -f backendservice.yaml
+
+You need to alter at least the following configuration items
+
+In frontend.yaml and backend.yaml: 
+* spec.template.spec.containers['image']
+
+If you are going to use the already made docker images (as they are in the configurations already), the .dockerconfigjson string needed for the registrysecret.yaml will be provided per request.
