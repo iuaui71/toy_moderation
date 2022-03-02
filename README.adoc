@@ -28,14 +28,6 @@ The above script creates two docker images to the local environment with tags
 
 IMPORTANT: You need to use the above tags or alter the tags accordingly in your Kubernetes related yaml files!
 
-== Frontend service (nginx)
-=== Creating a docker image
+== Deploying into the Kubernetes environment
 
-=== Create Kubernetes Deployment and Service 
-
-== Backend service (flask)
-=== Creating a docker image
-
-=== Create Kubernetes Deployment
-
-
+Please see link:./kubernetes/README.adoc
