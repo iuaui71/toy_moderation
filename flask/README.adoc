@@ -1,0 +1,10 @@
+== Test Driven Development parts...
+
+If you want to run the included tests here, you need to run (if not already available) following commands in this directory to be able to run the tests against the application python file.
+
+[source, bash]
+python3 -m venv env
+source env/bin/activate
+#following can be unnecessary step if you already have the flask and/or pytest installed 
+pip install flask pytest
+python -m pytest
