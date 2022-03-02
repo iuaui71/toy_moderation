@@ -36,4 +36,8 @@ IMPORTANT: You need to use the above tags or alter the tags accordingly in your 
 == Backend service (flask)
 === Creating a docker image
 
-=== Create Kubernetes Deplpoyment
+=== Create Kubernetes Deployment
+
+== K8s taks
+
+include:: kubernetes/README.adoc
