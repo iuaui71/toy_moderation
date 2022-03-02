@@ -1,13 +1,13 @@
 from crypt import methods
-from flask import Flask
-from flask import request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/api', methods=['POST'])
 def helloworld():
-   return '{"response": "Accepted"}'
+   data = request.form.to_dict()
+   return render_template('index.html', title='ACCEPTED', comment=data['comment'])
 
 def create_app():
    return app
