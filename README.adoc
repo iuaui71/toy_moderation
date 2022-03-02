@@ -30,4 +30,27 @@ IMPORTANT: You need to use the above tags or alter the tags accordingly in your 
 
 == Deploying into the Kubernetes environment
 
-Please see link:./kubernetes/README.adoc
+Please see the README in the kubernetes directory
+
+== The information about How it all works
+
+You can inspect and try to understand how this implementation works.
+Short description, however, is as follows
+
+* we create a python application to handle 'api requests'
+** we do it with TDD style (test driven development)
+* we create a nginx environment to host a static 'comment site'
+* we create docker images both of the service parts
+* we create a kubernetes environment with 
+** docker images
+*** we need a secret to pull the images from the registry if they are to be pulled from there
+** service for the backend to be accessible by frontend
+** service for the frontend to be accessible by "world"
+
+What to do with the app?
+
+* in the front page there is comment field. Please put some comment on it. (You can even try if there is any XSS vulnerabilities available)
+* click "submit"
+
+Current images in the github container registry (ghcr.io) are created with the Docker and resource files included in this repository.
+I hope that you are able to create, test and run the container in your Kubernetes environment.

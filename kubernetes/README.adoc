@@ -20,3 +20,21 @@ In frontend.yaml and backend.yaml:
 * spec.template.spec.containers['image']
 
 IMPORTANT: If you are going to use the already made docker images (as they are in the configurations already), the .dockerconfigjson string needed for the registrysecret.yaml will be provided per request.
+
+You are able to access to the front end via its service. You can check the needed information by issuing the following commands 
+
+[source, bash]
+kubectl get nodes -owide
+kubectl -n toymoderation get svc |grep -i frontend
+
+First command gives you IP adress(es) used by your node(s)
+The second command gives you the NodePort of the service 
+Combining these you are able to get the accessible URL for the application bundle's frontend (you are not able to access the backend outside the cluster as the service is ClusterIP)
+
+For example combining the following information 
+
+*placeholder for the output of the pevious commands
+
+we can combine the URL as follows
+
+http://<here one of the node IPs>:<here the nodeport got from the command>
