@@ -19,4 +19,4 @@ In frontend.yaml and backend.yaml:
 
 * spec.template.spec.containers['image']
 
-If you are going to use the already made docker images (as they are in the configurations already), the .dockerconfigjson string needed for the registrysecret.yaml will be provided per request.
+IMPORTANT: If you are going to use the already made docker images (as they are in the configurations already), the .dockerconfigjson string needed for the registrysecret.yaml will be provided per request.
