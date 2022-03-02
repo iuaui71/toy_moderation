@@ -40,4 +40,4 @@ IMPORTANT: You need to use the above tags or alter the tags accordingly in your 
 
 == K8s taks
 
-include:: kubernetes/README.adoc
+include::kubernetes/README.adoc
