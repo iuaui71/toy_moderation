@@ -33,8 +33,29 @@ Combining these you are able to get the accessible URL for the application bundl
 
 For example combining the following information 
 
-*placeholder for the output of the pevious commands
+[source, bash]
+ahtiaine@desktop:~/projects/toy_moderation/kubernetes$ kubectl get nodes -owide
+NAME         STATUS   ROLES               AGE    VERSION   INTERNAL-IP   EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+edge-0       Ready    worker              158d   v1.21.5   172.16.0.24   10.131.72.73    Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+edge-1       Ready    worker              158d   v1.21.5   172.16.0.22   10.131.70.197   Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+edge-2       Ready    worker              158d   v1.21.5   172.16.0.36   10.131.71.82    Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+master-0     Ready    controlplane,etcd   136d   v1.21.5   172.16.0.10   10.131.73.78    Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+master-1     Ready    controlplane,etcd   158d   v1.21.5   172.16.0.16   10.131.71.16    Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+master-2     Ready    controlplane,etcd   158d   v1.21.5   172.16.0.11   10.131.72.203   Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+worker-0     Ready    worker              158d   v1.21.5   172.16.0.23   10.131.67.210   Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+worker-1-0   Ready    worker              158d   v1.21.5   172.16.0.8    10.131.72.125   Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+worker-1-1   Ready    worker              158d   v1.21.5   172.16.0.18   10.131.66.46    Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+worker-2-0   Ready    worker              158d   v1.21.5   172.16.0.35   10.131.71.165   Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+worker-2-1   Ready    worker              158d   v1.21.5   172.16.0.19   10.131.70.7     Ubuntu 18.04.2 LTS   4.15.0-48-generic   docker://18.9.6
+ahtiaine@desktop:~/projects/toy_moderation/kubernetes$ kubectl -n toymoderation get svc
+NAME       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+backend    ClusterIP   10.255.122.227   <none>        8080/TCP       7m38s
+frontend   NodePort    10.255.17.71     <none>        80:55680/TCP   6m50s
 
-we can combine the URL as follows
 
-http://<here one of the node IPs>:<here the nodeport got from the command>
+Here we can use URL by combining the node's external IP and frontend's service por 55680
+for example we use master-2 node:
+
+http://10.131.72.203:55680
+
+IMPORTANT: Your output will be different so alter your URL accordingly.
